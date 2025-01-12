@@ -148,8 +148,8 @@ section{
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    width: 768px;
-    height: 768px;
+    width: 732px;
+    height: 732px;
     overflow: hidden;
     pointer-events: none;
 }
@@ -158,8 +158,8 @@ section{
     position: absolute;
     top: 0;
     right: 0;
-    width: 768px;
-    height: 768px;
+    width: 732px;
+    height: 732px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -211,9 +211,51 @@ section{
     right: 0;
     width: 0;
     height: 0;
-    border-top: 384px solid blue;
-    border-right: 384px solid yellowgreen;
-    border-bottom: 384px solid purple;
-    border-left: 384px solid red;
+    border-top: 366px solid var(--main-color);
+    border-right: 366px solid var(--main-color);
+    border-bottom: 366px solid var(--main-color);
+    border-left: 366px solid transparent;
 }
-/* 30.00 */
+
+.home-img img{
+    position: absolute;
+    bottom: 37px;
+    right: 0;
+    width: 60%;
+    pointer-events: none;
+}
+
+span{
+    color: var(--main-color);
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background: red;
+}
+
+.about-img img{
+    width: 40vw;
+}
+
+.heading{
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3{
+    font-size: 2rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
