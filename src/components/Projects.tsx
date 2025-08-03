@@ -1,16 +1,16 @@
-import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { Project } from '../types';
+import LaunchPadImage from '../assets/images/projects/launchpad.png';
 
 export default function Projects() {
   const projects: Project[] = [
     {
       id: '1',
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      techStack: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS'],
-      githubUrl: 'https://github.com',
+      title: 'LaunchPad Internship Management System',
+      description: 'A web platform built in my 2nd year to simplify internship applications and management. It supports student applications, mentor tracking, and admin controls',
+      image: LaunchPadImage,
+      techStack: ['HTML', 'CSS', 'PostgreSQL', 'PHP', 'Asana'],
+      githubUrl: 'https://github.com/group-project-cs46/website',
       liveUrl: 'https://demo.com'
     },
     {
@@ -50,7 +50,7 @@ export default function Projects() {
               key={project.id}
               className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-60 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
