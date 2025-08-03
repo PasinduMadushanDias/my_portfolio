@@ -1,5 +1,5 @@
-import React from 'react';
 import { ArrowDown } from 'lucide-react';
+import profileImage from '../assets/images/profile.jpg';
 
 export default function Hero() {
   const scrollToAbout = () => {
@@ -18,7 +18,7 @@ export default function Hero() {
             <div className="relative">
               <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl ring-4 ring-emerald-500/20 dark:ring-emerald-400/20">
                 <img
-                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src={profileImage}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
