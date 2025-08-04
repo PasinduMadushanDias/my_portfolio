@@ -1,6 +1,6 @@
 import { ExternalLink, Github } from 'lucide-react';
 import { Project } from '../types';
-import LaunchPadImage from '../assets/images/projects/launchpad.png';
+import LaunchPadImage from '../assets/images/projects/LaunchPad.png';
 
 export default function Projects() {
   const projects: Project[] = [
