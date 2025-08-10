@@ -8,6 +8,16 @@ export interface Project {
   liveUrl?: string;
 }
 
+export interface Certificate {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  issuer: string;
+  date: string;
+  credentialUrl?: string;
+}
+
 export interface Experience {
   id: string;
   company: string;
