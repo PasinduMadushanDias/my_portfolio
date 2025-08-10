@@ -6,6 +6,7 @@ export interface Project {
   techStack: string[];
   githubUrl?: string;
   liveUrl?: string;
+  category: 'Web' | 'Mobile' | 'Game';
 }
 
 export interface Certificate {
@@ -15,6 +16,9 @@ export interface Certificate {
   image: string;
   issuer: string;
   date: string;
+  category?: 'professional' | 'sports';
+  achievement?: string;
+  location?: string;
   credentialUrl?: string;
 }
 

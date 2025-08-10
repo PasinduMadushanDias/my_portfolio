@@ -1,5 +1,15 @@
-import React from 'react';
 import { Code, Server, PenTool as Tool, Database } from 'lucide-react';
+import { 
+  FaReact, FaNode, FaVuejs, FaHtml5, FaJs, 
+  FaPython, FaDocker, FaGithub
+} from 'react-icons/fa';
+import { 
+  SiTypescript, SiTailwindcss, SiExpress, 
+  SiFastapi, SiGraphql, SiPostgresql, SiMongodb, 
+  SiRedis, SiMysql, SiSupabase, SiFirebase, 
+  SiGooglecloud, SiKubernetes, SiTerraform ,SiPhp,
+  SiSpringboot
+} from 'react-icons/si';
 
 export default function Skills() {
   const skillCategories = [
@@ -7,48 +17,50 @@ export default function Skills() {
       icon: Code,
       title: 'Frontend',
       skills: [
-        'React/Next.js',
-        'TypeScript',
-        'Tailwind CSS',
-        'Vue.js',
-        'HTML5/CSS3',
-        'JavaScript ES6+'
+        { name: 'React/Next.js', icon: FaReact },
+        { name: 'TypeScript', icon: SiTypescript },
+        { name: 'Tailwind CSS', icon: SiTailwindcss },
+        { name: 'Vue.js', icon: FaVuejs },
+        { name: 'HTML5/CSS3', icon: FaHtml5 },
+        { name: 'JavaScript ES6+', icon: FaJs },
+        { name: 'PHP', icon: SiPhp }
       ]
     },
     {
       icon: Server,
       title: 'Backend',
       skills: [
-        'Node.js',
-        'Python/Django',
-        'Express.js',
-        'FastAPI',
-        'RESTful APIs',
-        'GraphQL'
+        { name: 'Node.js', icon: FaNode },
+        { name: 'Python/Django', icon: FaPython },
+        { name: 'Express.js', icon: SiExpress },
+        { name: 'FastAPI', icon: SiFastapi },
+        { name: 'RESTful APIs', icon: SiGraphql },
+        { name: 'GraphQL', icon: SiGraphql },
+        { name: 'Spring Boot', icon: SiSpringboot }
       ]
     },
     {
       icon: Database,
       title: 'Databases',
       skills: [
-        'PostgreSQL',
-        'MongoDB',
-        'Redis',
-        'MySQL',
-        'Supabase',
-        'Firebase'
+        { name: 'PostgreSQL', icon: SiPostgresql },
+        { name: 'MongoDB', icon: SiMongodb },
+        { name: 'Redis', icon: SiRedis },
+        { name: 'MySQL', icon: SiMysql },
+        { name: 'Supabase', icon: SiSupabase },
+        { name: 'Firebase', icon: SiFirebase }
       ]
     },
     {
       icon: Tool,
       title: 'Tools & DevOps',
       skills: [
-        'AWS/GCP',
-        'Docker',
-        'Kubernetes',
-        'Git/GitHub',
-        'CI/CD',
-        'Terraform'
+        { name: 'AWS/GCP', icon: SiGooglecloud },
+        { name: 'Docker', icon: FaDocker },
+        { name: 'Kubernetes', icon: SiKubernetes },
+        { name: 'Git/GitHub', icon: FaGithub },
+        { name: 'CI/CD', icon: SiTerraform },
+        { name: 'Terraform', icon: SiTerraform }
       ]
     }
   ];
@@ -82,16 +94,20 @@ export default function Skills() {
                 </h3>
 
                 <div className="space-y-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div
-                      key={skillIndex}
-                      className="bg-white dark:bg-gray-700 px-4 py-2 rounded-lg text-center shadow-sm hover:shadow-md transition-shadow duration-200"
-                    >
-                      <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                        {skill}
-                      </span>
-                    </div>
-                  ))}
+                  {category.skills.map((skill, skillIndex) => {
+                    const SkillIcon = skill.icon;
+                    return (
+                      <div
+                        key={skillIndex}
+                        className="bg-white dark:bg-gray-700 px-4 py-2 rounded-lg flex items-center shadow-sm hover:shadow-md transition-shadow duration-200"
+                      >
+                        <SkillIcon className="h-5 w-5 mr-2 text-emerald-600 dark:text-emerald-400" />
+                        <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                          {skill.name}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             );
