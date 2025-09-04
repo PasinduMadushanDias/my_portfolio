@@ -1,48 +1,9 @@
-import React from 'react';
 import { Briefcase, MapPin, Calendar } from 'lucide-react';
 import { Experience } from '../types';
 
 export default function ExperienceSection() {
   const experiences: Experience[] = [
-    {
-      id: '1',
-      company: 'TechCorp Solutions',
-      position: 'Senior Software Engineer',
-      duration: '2022 - Present',
-      location: 'San Francisco, CA',
-      achievements: [
-        'Led development of microservices architecture serving 1M+ users',
-        'Improved application performance by 40% through optimization strategies',
-        'Mentored 3 junior developers and established code review processes',
-        'Implemented CI/CD pipelines reducing deployment time by 60%'
-      ]
-    },
-    {
-      id: '2',
-      company: 'StartupXYZ',
-      position: 'Full Stack Developer',
-      duration: '2020 - 2022',
-      location: 'Remote',
-      achievements: [
-        'Built scalable web applications from concept to production',
-        'Developed RESTful APIs handling 10k+ requests per minute',
-        'Collaborated with design team to implement pixel-perfect UIs',
-        'Integrated third-party services including payment processors'
-      ]
-    },
-    {
-      id: '3',
-      company: 'Digital Agency Pro',
-      position: 'Junior Software Developer',
-      duration: '2019 - 2020',
-      location: 'Austin, TX',
-      achievements: [
-        'Developed responsive websites for 20+ client projects',
-        'Maintained and enhanced legacy codebases',
-        'Participated in agile development processes',
-        'Gained expertise in modern JavaScript frameworks'
-      ]
-    }
+
   ];
 
   return (

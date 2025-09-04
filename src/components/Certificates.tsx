@@ -17,53 +17,53 @@ export default function Certificates() {
       category: 'professional',
       credentialUrl: 'https://lnkd.in/eNHSusvQ'
     },
-    {
-      id: '2',
-      title: 'Google Professional Cloud Developer',
-      description: 'Demonstrates ability to build and deploy scalable applications on Google Cloud',
-      image: 'https://images.pexels.com/photos/573243/pexels-photo-573243.jpeg?auto=compress&cs=tinysrgb&w=800',
-      issuer: 'Google Cloud',
-      date: 'January 2024',
-      category: 'professional',
-      credentialUrl: 'https://cloud.google.com/certification'
-    },
-    {
-      id: '3',
-      title: 'React Advanced Certification',
-      description: 'Comprehensive assessment of React knowledge including hooks, context, and performance optimization',
-      image: 'https://images.pexels.com/photos/7088439/pexels-photo-7088439.jpeg?auto=compress&cs=tinysrgb&w=800',
-      issuer: 'Frontend Masters',
-      date: 'November 2023',
-      category: 'professional',
-      credentialUrl: 'https://frontendmasters.com'
-    }
+    // {
+    //   id: '2',
+    //   title: 'Google Professional Cloud Developer',
+    //   description: 'Demonstrates ability to build and deploy scalable applications on Google Cloud',
+    //   image: 'https://images.pexels.com/photos/573243/pexels-photo-573243.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   issuer: 'Google Cloud',
+    //   date: 'January 2024',
+    //   category: 'professional',
+    //   credentialUrl: 'https://cloud.google.com/certification'
+    // },
+    // {
+    //   id: '3',
+    //   title: 'React Advanced Certification',
+    //   description: 'Comprehensive assessment of React knowledge including hooks, context, and performance optimization',
+    //   image: 'https://images.pexels.com/photos/7088439/pexels-photo-7088439.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   issuer: 'Frontend Masters',
+    //   date: 'November 2023',
+    //   category: 'professional',
+    //   credentialUrl: 'https://frontendmasters.com'
+    // }
   ];
   
   const sportsCertificates: Certificate[] = [
-    {
-      id: '4',
-      title: 'National Swimming Championship',
-      description: 'Competed in the 100m freestyle event against top swimmers from across the country.',
-      image: 'https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=800',
-      issuer: 'National Aquatics Association',
-      achievement: 'Silver Medal',
-      date: 'June 2023',
-      category: 'sports',
-      location: 'National Aquatic Center, Colombo',
-      credentialUrl: 'https://example.com/certificate'
-    },
-    {
-      id: '5',
-      title: 'Inter-University Basketball Tournament',
-      description: 'Represented the university in the annual inter-university basketball championship.',
-      image: 'https://images.pexels.com/photos/358042/pexels-photo-358042.jpeg?auto=compress&cs=tinysrgb&w=800',
-      issuer: 'University Sports Council',
-      achievement: 'Champions - Team Captain',
-      date: 'March 2024',
-      category: 'sports',
-      location: 'University Sports Complex',
-      credentialUrl: 'https://example.com/certificate'
-    }
+    // {
+    //   id: '4',
+    //   title: 'National Swimming Championship',
+    //   description: 'Competed in the 100m freestyle event against top swimmers from across the country.',
+    //   image: 'https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   issuer: 'National Aquatics Association',
+    //   achievement: 'Silver Medal',
+    //   date: 'June 2023',
+    //   category: 'sports',
+    //   location: 'National Aquatic Center, Colombo',
+    //   credentialUrl: 'https://example.com/certificate'
+    // },
+    // {
+    //   id: '5',
+    //   title: 'Inter-University Basketball Tournament',
+    //   description: 'Represented the university in the annual inter-university basketball championship.',
+    //   image: 'https://images.pexels.com/photos/358042/pexels-photo-358042.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   issuer: 'University Sports Council',
+    //   achievement: 'Champions - Team Captain',
+    //   date: 'March 2024',
+    //   category: 'sports',
+    //   location: 'University Sports Complex',
+    //   credentialUrl: 'https://example.com/certificate'
+    // }
   ];
 
   return (

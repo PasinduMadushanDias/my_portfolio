@@ -33,7 +33,7 @@ export default function Hero() {
               Pasindu Madushan
             </h1>
             <h2 className="text-3xl lg:text-4xl font-semibold text-emerald-600 dark:text-emerald-400 mb-8">
-              Full-Stack Developer | Flutter & Spring Boot | Linux Enthusiast
+              Full-Stack Developer | Flutter & Spring Boot 
             </h2>
             <p className="text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl leading-relaxed">
               a Full-Stack Developer passionate about crafting web and mobile apps,  

@@ -17,46 +17,46 @@ export default function Projects() {
       liveUrl: 'https://demo.com',
       category: 'Web'
     },
-    {
-      id: '2',
-      title: 'Project Management Tool',
-      description: 'Collaborative project management application with real-time updates, team chat, and task tracking.',
-      image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
-      techStack: ['Next.js', 'TypeScript', 'Socket.io', 'MongoDB', 'Docker'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      category: 'Web'
-    },
-    {
-      id: '3',
-      title: 'AI-Powered Analytics Dashboard',
-      description: 'Data visualization platform with machine learning insights and predictive analytics capabilities.',
-      image: 'https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=800',
-      techStack: ['React', 'Python', 'FastAPI', 'TensorFlow', 'D3.js'],
-      githubUrl: 'https://github.com',
-      category: 'Web'
-    },
+    // {
+    //   id: '2',
+    //   title: 'Project Management Tool',
+    //   description: 'Collaborative project management application with real-time updates, team chat, and task tracking.',
+    //   image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   techStack: ['Next.js', 'TypeScript', 'Socket.io', 'MongoDB', 'Docker'],
+    //   githubUrl: 'https://github.com',
+    //   liveUrl: 'https://demo.com',
+    //   category: 'Web'
+    // },
+    // {
+    //   id: '3',
+    //   title: 'AI-Powered Analytics Dashboard',
+    //   description: 'Data visualization platform with machine learning insights and predictive analytics capabilities.',
+    //   image: 'https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   techStack: ['React', 'Python', 'FastAPI', 'TensorFlow', 'D3.js'],
+    //   githubUrl: 'https://github.com',
+    //   category: 'Web'
+    // },
     // Example Mobile and Game projects
-    {
-      id: '4',
-      title: 'Mobile Fitness Tracker',
-      description: 'A cross-platform mobile app for tracking workouts and health metrics.',
-      image: 'https://images.pexels.com/photos/903171/pexels-photo-903171.jpeg?auto=compress&cs=tinysrgb&w=800',
-      techStack: ['React Native', 'Expo', 'Firebase'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      category: 'Mobile'
-    },
-    {
-      id: '5',
-      title: '2D Platformer Game',
-      description: 'A fun 2D platformer game built with Unity and C#.',
-      image: 'https://images.pexels.com/photos/163077/game-console-controller-joystick-163077.jpeg?auto=compress&cs=tinysrgb&w=800',
-      techStack: ['Unity', 'C#', 'Photoshop'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://demo.com',
-      category: 'Game'
-    }
+    // {
+    //   id: '4',
+    //   title: 'Mobile Fitness Tracker',
+    //   description: 'A cross-platform mobile app for tracking workouts and health metrics.',
+    //   image: 'https://images.pexels.com/photos/903171/pexels-photo-903171.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   techStack: ['React Native', 'Expo', 'Firebase'],
+    //   githubUrl: 'https://github.com',
+    //   liveUrl: 'https://demo.com',
+    //   category: 'Mobile'
+    // },
+    // {
+    //   id: '5',
+    //   title: '2D Platformer Game',
+    //   description: 'A fun 2D platformer game built with Unity and C#.',
+    //   image: 'https://images.pexels.com/photos/163077/game-console-controller-joystick-163077.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   techStack: ['Unity', 'C#', 'Photoshop'],
+    //   githubUrl: 'https://github.com',
+    //   liveUrl: 'https://demo.com',
+    //   category: 'Game'
+    // }
   ];
 
   const categories: Array<'All' | 'Web' | 'Mobile' | 'Game'> = ['All', 'Web', 'Mobile', 'Game'];
