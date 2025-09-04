@@ -33,9 +33,9 @@ export default function About() {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Passionate software engineer with 5+ years of experience building robust web applications 
+            {/* Passionate software engineer with 5+ years of experience building robust web applications 
             and scalable backend systems. I thrive on solving complex problems and turning innovative 
-            ideas into reality.
+            ideas into reality. */}
           </p>
         </div>
 
