@@ -46,9 +46,9 @@ export default function Footer() {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-gray-400 flex items-center justify-center space-x-1">
-              <span>© 2025 Alex Johnson. Made with</span>
+              <span>© 2025 Pasindu Madushan. </span>
               <Heart className="h-4 w-4 text-red-500 fill-current" />
-              <span>and lots of coffee.</span>
+              <span></span>
             </p>
           </div>
         </div>

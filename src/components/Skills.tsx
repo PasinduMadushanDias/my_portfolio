@@ -17,10 +17,10 @@ export default function Skills() {
       icon: Code,
       title: 'Frontend',
       skills: [
-        { name: 'React/Next.js', icon: FaReact },
+        { name: 'React.js', icon: FaReact },
         { name: 'TypeScript', icon: SiTypescript },
         { name: 'Tailwind CSS', icon: SiTailwindcss },
-        { name: 'Vue.js', icon: FaVuejs },
+        // { name: 'Vue.js', icon: FaVuejs },
         { name: 'HTML5/CSS3', icon: FaHtml5 },
         { name: 'JavaScript ES6+', icon: FaJs },
         { name: 'PHP', icon: SiPhp }
@@ -31,11 +31,11 @@ export default function Skills() {
       title: 'Backend',
       skills: [
         { name: 'Node.js', icon: FaNode },
-        { name: 'Python/Django', icon: FaPython },
+        // { name: 'Python/Django', icon: FaPython },
         { name: 'Express.js', icon: SiExpress },
-        { name: 'FastAPI', icon: SiFastapi },
+        // { name: 'FastAPI', icon: SiFastapi },
         { name: 'RESTful APIs', icon: SiGraphql },
-        { name: 'GraphQL', icon: SiGraphql },
+        // { name: 'GraphQL', icon: SiGraphql },
         { name: 'Spring Boot', icon: SiSpringboot }
       ]
     },
@@ -45,9 +45,9 @@ export default function Skills() {
       skills: [
         { name: 'PostgreSQL', icon: SiPostgresql },
         { name: 'MongoDB', icon: SiMongodb },
-        { name: 'Redis', icon: SiRedis },
+        // { name: 'Redis', icon: SiRedis },
         { name: 'MySQL', icon: SiMysql },
-        { name: 'Supabase', icon: SiSupabase },
+        // { name: 'Supabase', icon: SiSupabase },
         { name: 'Firebase', icon: SiFirebase }
       ]
     },
@@ -56,11 +56,11 @@ export default function Skills() {
       title: 'Tools & DevOps',
       skills: [
         { name: 'AWS/GCP', icon: SiGooglecloud },
-        { name: 'Docker', icon: FaDocker },
-        { name: 'Kubernetes', icon: SiKubernetes },
+        // { name: 'Docker', icon: FaDocker },
+        // { name: 'Kubernetes', icon: SiKubernetes },
         { name: 'Git/GitHub', icon: FaGithub },
-        { name: 'CI/CD', icon: SiTerraform },
-        { name: 'Terraform', icon: SiTerraform }
+        // { name: 'CI/CD', icon: SiTerraform },
+        // { name: 'Terraform', icon: SiTerraform }
       ]
     }
   ];
