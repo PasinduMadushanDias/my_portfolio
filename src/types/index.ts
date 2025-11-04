@@ -4,7 +4,7 @@ export interface Project {
   description: string;
   image: string;
   techStack: string[];
-  githubUrl?: string;
+  githubUrls?: string[];
   liveUrl?: string;
   category: 'Web' | 'Mobile' | 'Game';
 }

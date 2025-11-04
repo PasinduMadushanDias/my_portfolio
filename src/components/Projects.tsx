@@ -1,11 +1,12 @@
 import { ExternalLink, Github } from 'lucide-react';
 import { Project } from '../types';
 import LaunchPadImage from '../assets/images/projects/LaunchPad.png';
+import SnapTalkImage from '../assets/images/projects/SnapTalk.png';
 
 import { useState } from 'react';
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState<'All' | 'Web' | 'Mobile' | 'Game'>('All');
+  const [selectedCategory, setSelectedCategory] = useState<'All' | 'Web' | 'Mobile'>('All');
   const projects: Project[] = [
     {
       id: '1',
@@ -13,53 +14,53 @@ export default function Projects() {
       description: 'A web platform built in my 2nd year to simplify internship applications and management. It supports student applications, mentor tracking, and admin controls',
       image: LaunchPadImage,
       techStack: ['HTML', 'CSS', 'PostgreSQL', 'PHP', 'Asana'],
-      githubUrl: 'https://github.com/group-project-cs46/website',
-      liveUrl: 'https://demo.com',
+      githubUrls: ['https://github.com/group-project-cs46/website'],
       category: 'Web'
     },
-    // {
-    //   id: '2',
-    //   title: 'Project Management Tool',
-    //   description: 'Collaborative project management application with real-time updates, team chat, and task tracking.',
-    //   image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
-    //   techStack: ['Next.js', 'TypeScript', 'Socket.io', 'MongoDB', 'Docker'],
-    //   githubUrl: 'https://github.com',
-    //   liveUrl: 'https://demo.com',
-    //   category: 'Web'
-    // },
-    // {
-    //   id: '3',
-    //   title: 'AI-Powered Analytics Dashboard',
-    //   description: 'Data visualization platform with machine learning insights and predictive analytics capabilities.',
-    //   image: 'https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=800',
-    //   techStack: ['React', 'Python', 'FastAPI', 'TensorFlow', 'D3.js'],
-    //   githubUrl: 'https://github.com',
-    //   category: 'Web'
-    // },
-    // Example Mobile and Game projects
-    // {
-    //   id: '4',
-    //   title: 'Mobile Fitness Tracker',
-    //   description: 'A cross-platform mobile app for tracking workouts and health metrics.',
-    //   image: 'https://images.pexels.com/photos/903171/pexels-photo-903171.jpeg?auto=compress&cs=tinysrgb&w=800',
-    //   techStack: ['React Native', 'Expo', 'Firebase'],
-    //   githubUrl: 'https://github.com',
-    //   liveUrl: 'https://demo.com',
-    //   category: 'Mobile'
-    // },
-    // {
-    //   id: '5',
-    //   title: '2D Platformer Game',
-    //   description: 'A fun 2D platformer game built with Unity and C#.',
-    //   image: 'https://images.pexels.com/photos/163077/game-console-controller-joystick-163077.jpeg?auto=compress&cs=tinysrgb&w=800',
-    //   techStack: ['Unity', 'C#', 'Photoshop'],
-    //   githubUrl: 'https://github.com',
-    //   liveUrl: 'https://demo.com',
-    //   category: 'Game'
-    // }
+    {
+      id: '2',
+      title: 'Pure Leaf Tea Factory Management System',
+      description: 'A comprehensive system for managing tea factory operations, including route management, transport management, loan and advance processing, fertilizer management, and tea leaf inventory tracking.',
+      image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
+      techStack: ['React', 'Spring Boot', 'PostgreSQL', 'Tailwind CSS', 'Firebase', 'Neon online DB'],
+      githubUrls: [
+        'https://github.com/3rd-year-project-14/tea-factory-frontend-web.git',
+        'https://github.com/3rd-year-project-14/tea-factory-backend.git',
+        'https://github.com/3rd-year-project-14/tea-factory-mobile-app.git'
+      ],
+      category: 'Web'
+    },
+    {
+      id: '3',
+      title: 'DineMate Restaurant Management System',
+      description: 'A comprehensive platform for managing restaurant operations, including table reservations, order management, and customer feedback.',
+      image: 'https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=800',
+      techStack: ['React', 'Express', 'MongoDB', 'Node.js'],
+      githubUrls: ['https://github.com/mern-stack-dev-project/food-mern-stack-project.git'],
+      category: 'Web'
+    },
+
+    {
+      id: '4',
+      title: 'SnapTalk Mobile Chat Application',
+      description: 'An instant chat app where two users can create a chat by scanning a QR code. Enables fast and secure messaging between users.',
+      image: SnapTalkImage,
+      techStack: ['Flutter ', 'SQLite', 'Firebase'],
+      githubUrls: ['https://github.com/TheekshanaThathsara/qr_chat_app.git'],
+      category: 'Mobile'
+    },
+    {
+      id: '5',
+      title: 'PetKart Online Pet Marketplace',
+      description: 'PetKart is an online marketplace designed for buying and selling pets, including cats, dogs, and fish. The platform allows users to browse pet listings, connect with sellers, and securely find or rehome pets with ease.',
+      image: 'https://images.pexels.com/photos/163077/game-console-controller-joystick-163077.jpeg?auto=compress&cs=tinysrgb&w=800',
+      techStack: ['Unity', 'C#', 'Photoshop'],
+      githubUrls: ['https://github.com/PetKart/petkart.git'],
+      category: 'Web'
+    }
   ];
 
-  const categories: Array<'All' | 'Web' | 'Mobile' | 'Game'> = ['All', 'Web', 'Mobile', 'Game'];
+  const categories: Array<'All' | 'Web' | 'Mobile'> = ['All', 'Web', 'Mobile'];
   const filteredProjects = selectedCategory === 'All' ? projects : projects.filter(p => p.category === selectedCategory);
 
   return (
@@ -130,17 +131,18 @@ export default function Projects() {
                   </div>
 
                   <div className="flex space-x-4">
-                    {project.githubUrl && (
+                    {Array.isArray(project.githubUrls) && project.githubUrls.map((url, idx) => (
                       <a
-                        href={project.githubUrl}
+                        key={url}
+                        href={url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200"
                       >
                         <Github className="h-4 w-4 mr-2" />
-                        Code
+                        Code {project.githubUrls && project.githubUrls.length > 1 ? idx + 1 : ''}
                       </a>
-                    )}
+                    ))}
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
