@@ -54,7 +54,7 @@ export default function Projects() {
       title: 'PetKart Online Pet Marketplace',
       description: 'PetKart is an online marketplace designed for buying and selling pets, including cats, dogs, and fish. The platform allows users to browse pet listings, connect with sellers, and securely find or rehome pets with ease.',
       image: 'https://images.pexels.com/photos/163077/game-console-controller-joystick-163077.jpeg?auto=compress&cs=tinysrgb&w=800',
-      techStack: ['Unity', 'C#', 'Photoshop'],
+      techStack: ['React', 'Express', 'MongoDB', 'Node.js'],
       githubUrls: ['https://github.com/PetKart/petkart.git'],
       category: 'Web'
     }
