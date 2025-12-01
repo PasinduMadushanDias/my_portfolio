@@ -1,4 +1,4 @@
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import profileImage from '../assets/images/profile.jpg';
 
 export default function Hero() {
@@ -58,6 +58,35 @@ with a deep appreciation for the power and flexibility of Linux.
                 className="inline-flex items-center px-10 py-4 border-2 border-emerald-600 dark:border-emerald-400 text-lg font-medium rounded-lg text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200"
               >
                 Get In Touch
+              </a>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex gap-4 justify-center lg:justify-start mt-8">
+              <a
+                href="https://github.com/PasinduMadushanDias"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-all duration-200 transform hover:scale-110"
+                aria-label="GitHub"
+              >
+                <Github className="h-6 w-6 text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/pasindu-madushan-504907281/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-all duration-200 transform hover:scale-110"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-6 w-6 text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400" />
+              </a>
+              <a
+                href="mailto:pmdwijegunasinghe@gmail.com"
+                className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-all duration-200 transform hover:scale-110"
+                aria-label="Email"
+              >
+                <Mail className="h-6 w-6 text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400" />
               </a>
             </div>
           </div>

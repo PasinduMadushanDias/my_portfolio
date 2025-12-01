@@ -1,28 +1,33 @@
 import React from 'react';
-import { Code, Zap, Users } from 'lucide-react';
+import { Code, Rocket, Brain, Target } from 'lucide-react';
 
 export default function About() {
   const highlights = [
     {
       icon: Code,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable, and efficient code that stands the test of time.'
+      title: 'Full-Stack Development',
+      description: 'Proficient in building end-to-end applications using modern technologies like React, Spring Boot, and Flutter for seamless user experiences.'
     },
     {
-      icon: Zap,
-      title: 'Performance',
-      description: 'Optimizing applications for speed, scalability, and exceptional user experience.'
+      icon: Rocket,
+      title: 'Problem Solver',
+      description: 'Passionate about tackling complex challenges and transforming innovative ideas into functional, scalable solutions.'
     },
     {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'Working effectively in agile teams to deliver high-quality software solutions.'
+      icon: Brain,
+      title: 'Continuous Learning',
+      description: 'Committed to staying current with emerging technologies and industry best practices to deliver cutting-edge solutions.'
+    },
+    {
+      icon: Target,
+      title: 'Project Delivery',
+      description: 'Experienced in managing projects from conception to deployment, ensuring quality and meeting deadlines consistently.'
     }
   ];
 
   const coreSkills = [
-    'JavaScript/TypeScript', 'React/Next.js', 'Node.js', 'Python',
-    'AWS/Cloud Services', 'PostgreSQL/MongoDB', 'Docker/Kubernetes', 'Git/CI/CD'
+    'React.js', 'Spring Boot', 'Flutter', 'Node.js',
+    'PostgreSQL', 'MongoDB', 'Firebase', 'Tailwind CSS'
   ];
 
   return (
@@ -33,9 +38,9 @@ export default function About() {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            {/* Passionate software engineer with 5+ years of experience building robust web applications 
-            and scalable backend systems. I thrive on solving complex problems and turning innovative 
-            ideas into reality. */}
+            I'm a passionate Computer Science undergraduate at the University of Colombo School of Computing, 
+            specializing in full-stack development. With hands-on experience in building web and mobile applications, 
+            I combine technical expertise with creative problem-solving to deliver impactful software solutions.
           </p>
         </div>
 
