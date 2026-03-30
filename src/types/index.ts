@@ -29,6 +29,7 @@ export interface Experience {
   duration: string;
   location: string;
   achievements: string[];
+  repositoryUrl?: string;
 }
 
 export interface Education {
@@ -37,6 +38,7 @@ export interface Education {
   degree: string;
   duration: string;
   location: string;
+  achievements?: string[];
 }
 
 export interface ContactForm {

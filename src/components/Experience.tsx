@@ -1,9 +1,23 @@
-import { Briefcase, MapPin, Calendar } from 'lucide-react';
+import { Briefcase, MapPin, Calendar, ExternalLink } from 'lucide-react';
 import { Experience } from '../types';
 
 export default function ExperienceSection() {
   const experiences: Experience[] = [
-
+    {
+      id: 'rasaswadaya',
+      position: 'Research Student',
+      company: 'Rasaswadaya Project (AI-Driven Entertainment Platform)',
+      duration: 'Recent',
+      location: 'Sri Lankan Arts & Culture',
+      achievements: [
+        'Architected and built scalable backend APIs using Next.js, Nest.js, and PostgreSQL, serving 500+ concurrent users',
+        'Engineered AI/ML modules for social graph mining, achieving 85% accuracy in personalized content recommendations',
+        'Delivered core platform features including user/artist management, content uploads, event handling, live streaming capabilities, and real-time analytics dashboards',
+        'Collaborated with cross-functional team of 5 developers to ensure on-time delivery of project milestones under supervision of Dr. Shiromi Arunathilake',
+        'Technologies: Next.js, Nest.js, PostgreSQL, Python'
+      ],
+      repositoryUrl: '#'
+    }
   ];
 
   return (
@@ -52,6 +66,17 @@ export default function ExperienceSection() {
                       <span>{exp.location}</span>
                     </div>
                   </div>
+                  {exp.repositoryUrl && (
+                    <a
+                      href={exp.repositoryUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center mt-4 space-x-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      <span>View Repository</span>
+                    </a>
+                  )}
                 </div>
 
                 <div className="lg:col-span-2">

@@ -1,14 +1,8 @@
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import profileImage from '../assets/images/profile.jpg';
+import cvFile from '../assets/cv/Pasindu_Madushan_Dias_CV.pdf';
 
 export default function Hero() {
-  const scrollToAbout = () => {
-    const element = document.querySelector('#about');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +10,7 @@ export default function Hero() {
           {/* Profile Photo */}
           <div className="flex justify-center lg:justify-start lg:pl-20 order-1 lg:order-1">
             <div className="relative">
-              <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl ring-4 ring-emerald-500/20 dark:ring-emerald-400/20">
+              <div className="w-96 h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-2xl ring-4 ring-emerald-500/20 dark:ring-emerald-400/20">
                 <img
                   src={profileImage}
                   alt="Profile"
@@ -41,13 +35,6 @@ with a deep appreciation for the power and flexibility of Linux.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button 
-                onClick={scrollToAbout}
-                className="inline-flex items-center px-10 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105"
-              >
-                Learn More
-                <ArrowDown className="ml-2 h-5 w-5" />
-              </button>
               <a
                 href="#contact"
                 onClick={(e) => {
@@ -55,9 +42,17 @@ with a deep appreciation for the power and flexibility of Linux.
                   const element = document.querySelector('#contact');
                   if (element) element.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="inline-flex items-center px-10 py-4 border-2 border-emerald-600 dark:border-emerald-400 text-lg font-medium rounded-lg text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200"
+                className="inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-medium rounded-lg text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200 transform hover:scale-105"
               >
                 Get In Touch
+              </a>
+              <a
+                href={cvFile}
+                download="Pasindu_Madushan_CV.pdf"
+                className="inline-flex items-center justify-center px-10 py-4 border-2 border-emerald-600 dark:border-emerald-400 text-lg font-medium rounded-lg text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all duration-200"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download CV
               </a>
             </div>
 
