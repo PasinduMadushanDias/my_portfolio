@@ -1,4 +1,5 @@
 import { GraduationCap, Calendar, MapPin } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Education } from '../types';
 
 export default function EducationSection() {
@@ -26,28 +27,44 @@ export default function EducationSection() {
   return (
     <section id="education" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Education
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Academic foundation and continuous learning in computer science and software engineering.
           </p>
-        </div>
+        </motion.div>
 
         <div className="max-w-4xl mx-auto">
           {/* Academic Education */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 flex items-center">
               <GraduationCap className="h-6 w-6 text-blue-600 dark:text-blue-400 mr-3" />
               Academic Qualifications
             </h3>
             
             <div className="space-y-6">
-              {education.map((edu) => (
-                <div
+              {education.map((edu, index) => (
+                <motion.div
                   key={edu.id}
-                  className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+                  whileHover={{ scale: 1.02 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.15 }}
+                  className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {edu.degree}
@@ -76,10 +93,10 @@ export default function EducationSection() {
                       ))}
                     </ul>
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

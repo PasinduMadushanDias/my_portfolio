@@ -1,14 +1,20 @@
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
+import { motion } from 'framer-motion';
 import profileImage from '../assets/images/profile.jpg';
 import cvFile from '../assets/cv/Pasindu_Madushan_Dias_CV.pdf';
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 pt-16">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 pt-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Profile Photo */}
-          <div className="flex justify-center lg:justify-start lg:pl-20 order-1 lg:order-1">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex justify-center lg:justify-start lg:pl-20 order-1 lg:order-1"
+          >
             <div className="relative">
               <div className="w-96 h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-500/20 dark:ring-blue-400/20">
                 <img
@@ -19,10 +25,15 @@ export default function Hero() {
               </div>
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 to-transparent"></div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Content */}
-          <div className="text-center lg:text-left order-2 lg:order-2">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-center lg:text-left order-2 lg:order-2"
+          >
             <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
               Pasindu Madushan
             </h1>
@@ -84,7 +95,7 @@ with a deep appreciation for the power and flexibility of Linux.
                 <Mail className="h-6 w-6 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400" />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

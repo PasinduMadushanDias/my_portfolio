@@ -1,4 +1,5 @@
 import { Briefcase, MapPin, Calendar, ExternalLink } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Experience } from '../types';
 
 export default function ExperienceSection() {
@@ -24,18 +25,34 @@ export default function ExperienceSection() {
     <section id="experience" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-bold text-gray-900 dark:text-white mb-4"
+          >
             Experience
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+          >
             My professional journey in software development, building solutions across various industries.
-          </p>
+          </motion.p>
         </div>
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div
+            <motion.div
               key={exp.id}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
               className="relative bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
             >
               {index !== experiences.length - 1 && (
@@ -96,7 +113,7 @@ export default function ExperienceSection() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
