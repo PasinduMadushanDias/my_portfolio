@@ -39,7 +39,7 @@ export default function EducationSection() {
           {/* Academic Education */}
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 flex items-center">
-              <GraduationCap className="h-6 w-6 text-emerald-600 dark:text-emerald-400 mr-3" />
+              <GraduationCap className="h-6 w-6 text-blue-600 dark:text-blue-400 mr-3" />
               Academic Qualifications
             </h3>
             
@@ -52,7 +52,7 @@ export default function EducationSection() {
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {edu.degree}
                   </h4>
-                  <p className="text-emerald-600 dark:text-emerald-400 font-medium mb-3">
+                  <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">
                     {edu.institution}
                   </p>
                   
@@ -70,7 +70,7 @@ export default function EducationSection() {
                     <ul className="mt-4 space-y-2">
                       {edu.achievements.map((achievement, index) => (
                         <li key={index} className="flex items-start space-x-3 text-sm text-gray-600 dark:text-gray-300">
-                          <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{achievement}</span>
                         </li>
                       ))}

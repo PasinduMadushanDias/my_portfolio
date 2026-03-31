@@ -55,7 +55,7 @@ export default function Header() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 px-3 py-3 text-base font-medium transition-colors duration-200"
+                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-3 text-base font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </button>
@@ -86,7 +86,7 @@ export default function Header() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200"
+                  className="block w-full text-left px-4 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200"
                 >
                   {item.name}
                 </button>

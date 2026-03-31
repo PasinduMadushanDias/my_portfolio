@@ -85,8 +85,8 @@ export default function Skills() {
                 key={index}
                 className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl mb-6 mx-auto">
-                  <Icon className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
+                <div className="flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-xl mb-6 mx-auto">
+                  <Icon className="h-8 w-8 text-blue-600 dark:text-blue-400" />
                 </div>
 
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white text-center mb-4">
@@ -101,7 +101,7 @@ export default function Skills() {
                         key={skillIndex}
                         className="bg-white dark:bg-gray-700 px-4 py-2 rounded-lg flex items-center shadow-sm hover:shadow-md transition-shadow duration-200"
                       >
-                        <SkillIcon className="h-5 w-5 mr-2 text-emerald-600 dark:text-emerald-400" />
+                        <SkillIcon className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" />
                         <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
                           {skill.name}
                         </span>

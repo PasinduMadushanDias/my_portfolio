@@ -83,8 +83,8 @@ export default function Projects() {
               onClick={() => setSelectedCategory(cat)}
               className={`px-5 py-2 rounded-full font-medium border transition-colors duration-200 focus:outline-none
                 ${selectedCategory === cat
-                  ? 'bg-emerald-600 text-white border-emerald-600'
-                  : 'bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-700 hover:bg-emerald-50 dark:hover:bg-gray-800'}`}
+                  ? 'bg-blue-600 text-white border-blue-600'
+                  : 'bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-700 hover:bg-blue-50 dark:hover:bg-gray-800'}`}
             >
               {cat}
             </button>
@@ -123,7 +123,7 @@ export default function Projects() {
                     {project.techStack.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 text-xs font-medium text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-900/30 rounded-full"
+                        className="px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/30 rounded-full"
                       >
                         {tech}
                       </span>
@@ -148,7 +148,7 @@ export default function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors duration-200"
+                        className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-200"
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo

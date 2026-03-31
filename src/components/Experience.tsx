@@ -40,19 +40,19 @@ export default function ExperienceSection() {
             >
               {index !== experiences.length - 1 && (
                 <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-full">
-                  <div className="w-px h-8 bg-gradient-to-b from-emerald-500 to-transparent"></div>
+                  <div className="w-px h-8 bg-gradient-to-b from-blue-500 to-transparent"></div>
                 </div>
               )}
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-1">
                   <div className="flex items-center space-x-2 mb-2">
-                    <Briefcase className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+                    <Briefcase className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                       {exp.position}
                     </h3>
                   </div>
-                  <p className="text-lg font-medium text-emerald-600 dark:text-emerald-400 mb-3">
+                  <p className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-3">
                     {exp.company}
                   </p>
                   
@@ -71,7 +71,7 @@ export default function ExperienceSection() {
                       href={exp.repositoryUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center mt-4 space-x-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
+                      className="inline-flex items-center mt-4 space-x-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                     >
                       <ExternalLink className="h-4 w-4" />
                       <span>View Repository</span>
@@ -89,7 +89,7 @@ export default function ExperienceSection() {
                         key={achieveIndex}
                         className="flex items-start space-x-3 text-gray-600 dark:text-gray-300"
                       >
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                         <span>{achievement}</span>
                       </li>
                     ))}
