@@ -10,6 +10,7 @@ const navigation = [
   { name: 'Certificates', href: '#certificates' },
   { name: 'Experience', href: '#experience' },
   { name: 'Education', href: '#education' },
+  { name: 'Activities', href: '#extracurricular' },
   { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ];

@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import ProjectDetail from './components/ProjectDetail';
 import ExperienceSection from './components/Experience';
 import EducationSection from './components/Education';
+import Extracurricular from './components/Extracurricular';
 import Certificates from './components/Certificates';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
@@ -22,6 +23,7 @@ function Home() {
       <Certificates />
       <ExperienceSection />
       <EducationSection />
+      <Extracurricular />
       <Skills />
       <Contact />
     </>
