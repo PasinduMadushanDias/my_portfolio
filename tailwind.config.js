@@ -6,24 +6,34 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', '"Fira Code"', 'ui-monospace', 'monospace'],
       },
       colors: {
-        emerald: {
-          50: '#ecfdf5',
-          100: '#d1fae5',
-          200: '#a7f3d0',
-          300: '#6ee7b7',
-          400: '#34d399',
-          500: '#10b981',
-          600: '#059669',
-          700: '#047857',
-          800: '#065f46',
-          900: '#064e3b',
+        // Matrix green — remapped onto the `blue` accent used across components
+        // so every existing `blue-*` class turns Matrix green automatically.
+        blue: {
+          50: '#e8ffe8',
+          100: '#c2ffc2',
+          200: '#7dff7d',
+          300: '#39ff5a',
+          400: '#00ff41',
+          500: '#00e03a',
+          600: '#00b82f',
+          700: '#008f24',
+          800: '#006618',
+          900: '#003b00',
+        },
+        matrix: {
+          bg: '#050805',
+          dark: '#0d0208',
+          dim: '#008f11',
+          green: '#00ff41',
         },
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+        'flicker': 'flicker 3s infinite',
       },
       keyframes: {
         fadeIn: {
@@ -33,6 +43,14 @@ export default {
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        flicker: {
+          '0%, 100%': { opacity: '1' },
+          '92%': { opacity: '1' },
+          '93%': { opacity: '0.4' },
+          '94%': { opacity: '1' },
+          '96%': { opacity: '0.7' },
+          '97%': { opacity: '1' },
         },
       },
     },

@@ -1,7 +1,12 @@
 export interface Project {
   id: string;
   title: string;
+  /** Short one/two-line summary shown on the project card. */
+  summary: string;
+  /** Full description shown on the project detail page. */
   description: string;
+  /** Detailed bullet-point highlights shown on the detail page. */
+  details?: string[];
   image: string;
   techStack: string[];
   githubUrls?: string[];

@@ -1,64 +1,11 @@
-import { ExternalLink, Github } from 'lucide-react';
-import { Project } from '../types';
-import LaunchPadImage from '../assets/images/projects/LaunchPad.png';
-import SnapTalkImage from '../assets/images/projects/SnapTalk.png';
-
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { projects } from '../data/projects';
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<'All' | 'Web' | 'Mobile'>('All');
-  const projects: Project[] = [
-    {
-      id: '1',
-      title: 'LaunchPad Internship Management System',
-      description: 'A web platform built in my 2nd year to simplify internship applications and management. It supports student applications, mentor tracking, and admin controls',
-      image: LaunchPadImage,
-      techStack: ['HTML', 'CSS', 'PostgreSQL', 'PHP', 'Asana'],
-      githubUrls: ['https://github.com/group-project-cs46/website'],
-      category: 'Web'
-    },
-    {
-      id: '2',
-      title: 'Pure Leaf Tea Factory Management System',
-      description: 'A comprehensive system for managing tea factory operations, including route management, transport management, loan and advance processing, fertilizer management, and tea leaf inventory tracking.',
-      image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
-      techStack: ['React', 'Spring Boot', 'PostgreSQL', 'Tailwind CSS', 'Firebase', 'Neon online DB'],
-      githubUrls: [
-        'https://github.com/3rd-year-project-14/tea-factory-frontend-web.git',
-        'https://github.com/3rd-year-project-14/tea-factory-backend.git',
-        'https://github.com/3rd-year-project-14/tea-factory-mobile-app.git'
-      ],
-      category: 'Web'
-    },
-    {
-      id: '3',
-      title: 'DineMate Restaurant Management System',
-      description: 'A comprehensive platform for managing restaurant operations, including table reservations, order management, and customer feedback.',
-      image: 'https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg?auto=compress&cs=tinysrgb&w=800',
-      techStack: ['React', 'Express', 'MongoDB', 'Node.js'],
-      githubUrls: ['https://github.com/mern-stack-dev-project/food-mern-stack-project.git'],
-      category: 'Web'
-    },
-
-    {
-      id: '4',
-      title: 'SnapTalk Mobile Chat Application',
-      description: 'An instant chat app where two users can create a chat by scanning a QR code. Enables fast and secure messaging between users.',
-      image: SnapTalkImage,
-      techStack: ['Flutter ', 'SQLite', 'Firebase'],
-      githubUrls: ['https://github.com/TheekshanaThathsara/qr_chat_app.git'],
-      category: 'Mobile'
-    },
-    {
-      id: '5',
-      title: 'PetKart Online Pet Marketplace',
-      description: 'PetKart is an online marketplace designed for buying and selling pets, including cats, dogs, and fish. The platform allows users to browse pet listings, connect with sellers, and securely find or rehome pets with ease.',
-      image: 'https://images.pexels.com/photos/163077/game-console-controller-joystick-163077.jpeg?auto=compress&cs=tinysrgb&w=800',
-      techStack: ['React', 'Express', 'MongoDB', 'Node.js'],
-      githubUrls: ['https://github.com/PetKart/petkart.git'],
-      category: 'Web'
-    }
-  ];
 
   const categories: Array<'All' | 'Web' | 'Mobile'> = ['All', 'Web', 'Mobile'];
   const filteredProjects = selectedCategory === 'All' ? projects : projects.filter(p => p.category === selectedCategory);
@@ -67,99 +14,116 @@ export default function Projects() {
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-bold text-gray-900 dark:text-white mb-4"
+          >
             Featured Projects
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+          >
             A selection of my recent work showcasing different technologies and problem-solving approaches.
-          </p>
+          </motion.p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex justify-center gap-4 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="flex justify-center gap-4 mb-12"
+        >
           {categories.map((cat) => (
-            <button
+            <motion.button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className={`px-5 py-2 rounded-full font-medium border transition-colors duration-200 focus:outline-none
                 ${selectedCategory === cat
                   ? 'bg-blue-600 text-white border-blue-600'
                   : 'bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-700 hover:bg-blue-50 dark:hover:bg-gray-800'}`}
             >
               {cat}
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.length === 0 ? (
             <div className="col-span-full text-center text-gray-500 dark:text-gray-400 text-lg py-12">
               No projects found in this category.
             </div>
           ) : (
-            filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
-              >
-                <div className="relative h-60 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                </div>
+            <AnimatePresence mode="popLayout">
+              {filteredProjects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  viewport={{ once: true, margin: '-50px' }}
+                  transition={{ duration: 0.4, delay: (index % 3) * 0.1 }}
+                  whileHover={{ y: -8 }}
+                >
+                  <Link
+                    to={`/projects/${project.id}`}
+                    className="group flex flex-col h-full bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                  >
+                    <div className="relative h-60 overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
+                    <div className="flex flex-col flex-1 p-6">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                        {project.summary}
+                      </p>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.techStack.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/30 rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.techStack.slice(0, 4).map((tech, i) => (
+                          <span
+                            key={i}
+                            className="px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/30 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                        {project.techStack.length > 4 && (
+                          <span className="px-3 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
+                            +{project.techStack.length - 4} more
+                          </span>
+                        )}
+                      </div>
 
-                  <div className="flex space-x-4">
-                    {Array.isArray(project.githubUrls) && project.githubUrls.map((url, idx) => (
-                      <a
-                        key={url}
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200"
-                      >
-                        <Github className="h-4 w-4 mr-2" />
-                        Code {project.githubUrls && project.githubUrls.length > 1 ? idx + 1 : ''}
-                      </a>
-                    ))}
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-200"
-                      >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))
+                      <div className="mt-auto inline-flex items-center text-sm font-semibold text-blue-600 dark:text-blue-400">
+                        View Details
+                        <ArrowRight className="h-4 w-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </AnimatePresence>
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -7,15 +7,17 @@ export default function ExperienceSection() {
     {
       id: 'rasaswadaya',
       position: 'Research Student',
-      company: 'Rasaswadaya Project (AI-Driven Entertainment Platform)',
+      company: 'Rasaswadaya Project',
       duration: 'Recent',
-      location: 'Sri Lankan Arts & Culture',
+      location: 'AI-Driven Entertainment Platform for Sri Lankan Arts & Culture',
       achievements: [
-        'Architected and built scalable backend APIs using Next.js, Nest.js, and PostgreSQL, serving 500+ concurrent users',
-        'Engineered AI/ML modules for social graph mining, achieving 85% accuracy in personalized content recommendations',
-        'Delivered core platform features including user/artist management, content uploads, event handling, live streaming capabilities, and real-time analytics dashboards',
-        'Collaborated with cross-functional team of 5 developers to ensure on-time delivery of project milestones under supervision of Dr. Shiromi Arunathilake',
-        'Technologies: Next.js, Nest.js, PostgreSQL, Python'
+        'Architected and built a scalable full-stack application utilizing Next.js, Node.js (Express), TypeScript, and PostgreSQL (with Prisma ORM), efficiently serving concurrent users and handling complex API routing',
+        'Developed an advanced recommendation system using Graph Neural Networks (GNN) with PyTorch Geometric to model cultural attributes and user interactions, achieving highly accurate and personalized content delivery',
+        'Delivered a comprehensive entertainment ecosystem featuring a calendar scheduling module for Artists/Organizers, an incorporated E-Commerce marketplace, and a dynamic social content feed',
+        'Architected a multi-tier Role-Based Access Control (RBAC) system with complex admin approval workflows alongside a robust gig booking engine using JWT and Supabase authentication',
+        'Built a Python-based end-to-end test automation suite with Playwright and pytest using the Page Object Model, covering UI and API test layers for auth, RBAC workflows, marketplace, cart, and checkout, and integrated it into a CI pipeline via GitHub Actions with automated HTML reporting',
+        'Collaborated with a cross-functional team of 5 developers to ensure on-time delivery of research milestones under the supervision of Dr. Shiromi Arunathilake',
+        'Technologies: TypeScript, Next.js (React), Node.js (Express.js), PostgreSQL, Prisma, Python, PyTorch (Geometric), Playwright, pytest, GitHub Actions'
       ],
       repositoryUrl: '#'
     }
